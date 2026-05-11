@@ -37,7 +37,7 @@ export function CTA() {
         <span
           className="font-display text-[22vw] leading-none tracking-tight uppercase text-white/[0.018]"
         >
-          ATLAS
+          SporAirFitness
         </span>
       </div>
 
@@ -53,7 +53,7 @@ export function CTA() {
               <div className="flex items-center gap-4 mb-5">
                 <div className="w-10 h-px bg-[#facc15]" />
                 <span className="font-body text-[#facc15] text-[10px] tracking-[0.4em] uppercase">
-                  "Join ATLAS"
+                  "Join SporAirFitness"
                 </span>
               </div>
 
@@ -70,7 +70,7 @@ export function CTA() {
 
               <p className="font-body text-white/45 text-base leading-relaxed max-w-[40ch] mb-10">
                 Most people spend years thinking about the gym they deserve.
-                ATLAS members just show up. One free session. That&apos;s all it takes.
+                SporAirFitness members just show up. One free session. That&apos;s all it takes.
               </p>
 
               <ul className="space-y-3 mb-10">

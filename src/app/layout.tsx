@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ATLAS — Elite Performance Studio",
+  title: "SporAirFitness — Elite Performance Studio",
   description:
     "Train like you mean it. Premium fitness coaching, science-backed programming, zero compromises.",
 };

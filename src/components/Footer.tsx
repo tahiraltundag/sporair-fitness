@@ -28,7 +28,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <span className="font-display text-2xl tracking-[0.12em] text-white">ATLAS</span>
+              <span className="font-display text-2xl tracking-[0.12em] text-white">SporAirFitness</span>
               <span className="w-[6px] h-[6px] bg-[#facc15] rotate-45 shrink-0" aria-hidden />
             </div>
             <p className="font-body text-[11px] text-white/25 leading-relaxed max-w-[16ch]">
@@ -38,7 +38,7 @@ export function Footer() {
             <div className="mt-5 font-body text-[10px] text-white/20 leading-relaxed">
               123 Performance Ave<br />
               New York, NY 10001<br />
-              <span className="text-[#facc15]/60">(212) 555-ATLAS</span>
+              <span className="text-[#facc15]/60">(212) 555-0100</span>
             </div>
           </div>
 
@@ -67,7 +67,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-8 border-t border-white/[0.05]">
           <div className="font-body text-[10px] text-white/20 tracking-[0.1em]">
-            © 2026 ATLAS Fitness, Inc. All rights reserved.
+            © 2026 SporAirFitness, Inc. All rights reserved.
           </div>
 
           {/* Socials — subtle */}

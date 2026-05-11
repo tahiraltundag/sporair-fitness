@@ -82,7 +82,7 @@ export function Trainers() {
               </h2>
             </div>
             <p className="font-body text-white/35 text-sm max-w-xs leading-relaxed">
-              Not influencers. Not weekend-certified. Every ATLAS coach is a career
+              Not influencers. Not weekend-certified. Every SporAirFitness coach is a career
               specialist with elite-level results to prove it.
             </p>
           </div>

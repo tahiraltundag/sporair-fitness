@@ -53,7 +53,7 @@ export function Hero() {
               key={i}
               className="font-display text-[#0a0a0a] text-[11px] tracking-[0.35em] uppercase mx-6"
             >
-              ATLAS FITNESS &nbsp;/&nbsp; ELITE PERFORMANCE STUDIO &nbsp;/&nbsp; TRAIN LIKE YOU MEAN IT
+              SporAirFitness &nbsp;/&nbsp; ELITE PERFORMANCE STUDIO &nbsp;/&nbsp; TRAIN LIKE YOU MEAN IT
             </span>
           ))}
         </div>

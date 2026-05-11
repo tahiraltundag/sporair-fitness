@@ -36,7 +36,7 @@ export function Navbar() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
             <span className="font-display text-2xl tracking-[0.12em] text-white group-hover:text-[#facc15] transition-colors duration-200">
-              ATLAS
+              SporAirFitness
             </span>
             <span
               className="w-[6px] h-[6px] bg-[#facc15] rotate-45 shrink-0"

@@ -6,7 +6,7 @@ import { BlurFade } from "@/components/ui/BlurFade";
 const TESTIMONIALS = [
   {
     quote:
-      "I've been to 11 gyms in 10 years. ATLAS is the first place where I didn't quit after 6 weeks. The programming is different. The coaches are different. I'm different.",
+      "I've been to 11 gyms in 10 years. SporAirFitness is the first place where I didn't quit after 6 weeks. The programming is different. The coaches are different. I'm different.",
     name:    "David M.",
     title:   "Member, 14 months",
     photo:   "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80",
@@ -31,7 +31,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "As a surgeon I need precision and longevity. ATLAS gave me both. I've added 15 years of active training life.",
+      "As a surgeon I need precision and longevity. SporAirFitness gave me both. I've added 15 years of active training life.",
     name:    "Dr. Priya N.",
     title:   "Member, 2 years",
     photo:   "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80",
