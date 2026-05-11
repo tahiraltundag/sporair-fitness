@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ──────────────────────────────────────────── */
+:root {
+  --black:    #0a0a0a;
+  --yellow:   #facc15;
+  --cream:    #fafaf5;
+  --charcoal: #27272a;
+  --white:    #ffffff;
+}
+
+@theme inline {
+  --color-black:    var(--black);
+  --color-yellow:   var(--yellow);
+  --color-cream:    var(--cream);
+  --color-charcoal: var(--charcoal);
+  --font-display:   var(--font-display-var);
+  --font-body:      var(--font-body-var);
+}
+
+/* ─── Base ───────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body-var), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Typography utilities ───────────────────────────────────── */
+.font-display { font-family: var(--font-display-var), sans-serif; }
+.font-body    { font-family: var(--font-body-var), sans-serif; }
+
+/* ─── Scrollbar hide ─────────────────────────────────────────── */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ─── Animations ─────────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 22s linear infinite; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes count-pulse {
+  0%,100% { opacity: 1; }
+  50%     { opacity: 0.6; }
+}
+
+/* ─── Grain overlay ──────────────────────────────────────────── */
+@keyframes grain {
+  0%,100% { transform: translate(0,0); }
+  10%     { transform: translate(-1%,-2%); }
+  30%     { transform: translate(1%, 2%); }
+  50%     { transform: translate(-1%, 1%); }
+  70%     { transform: translate(1%,-1%); }
+  90%     { transform: translate(-1%, 2%); }
+}
+.grain::before {
+  content: '';
+  position: fixed;
+  inset: -50%;
+  width: 200%; height: 200%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+  animation: grain 6s steps(1) infinite;
+}
+
+/* ─── Off-White bracket label utility ───────────────────────── */
+.ow-label::before { content: '"'; }
+.ow-label::after  { content: '"'; }
+
+/* ─── Range slider — yellow accent track ────────────────────── */
+input[type="range"].roi-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+input[type="range"].roi-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #facc15;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.15);
+}
+input[type="range"].roi-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #facc15;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.15);
+}
+
+/* ─── Shimmer keyframe (for ShimmerButton) ──────────────────── */
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
