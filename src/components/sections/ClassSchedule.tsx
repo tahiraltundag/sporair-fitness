@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BlurFade } from "@/components/ui/BlurFade";
 import { cn } from "@/lib/utils";
 
-const DAYS = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"] as const;
+const DAYS = ["PZT", "SAL", "ÇAR", "PER", "CUM", "CMT", "PAZ"] as const;
 type Day = typeof DAYS[number];
 
 type ClassItem = {
@@ -18,51 +18,51 @@ type ClassItem = {
 };
 
 const SCHEDULE: Record<Day, ClassItem[]> = {
-  MON: [
-    { time: "06:00", name: "Strength Foundation", trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "Mid",  spots: 4 },
-    { time: "07:30", name: "Olympic Lifting",      trainer: "Sofia Keller", trainerInitials: "SK", intensity: "High", spots: 2 },
-    { time: "09:00", name: "Mobility Flow",        trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low",  spots: 8 },
-    { time: "12:00", name: "Power HIIT",            trainer: "Jake Morrow", trainerInitials: "JM", intensity: "Max",  spots: 0 },
-    { time: "18:00", name: "Barbell Club",          trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "High", spots: 3 },
-    { time: "19:30", name: "Athletic Conditioning", trainer: "Jake Morrow", trainerInitials: "JM", intensity: "Max",  spots: 5 },
+  PZT: [
+    { time: "06:00", name: "Kuvvet Temel", trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "Mid",  spots: 4 },
+    { time: "07:30", name: "Olimpik Kaldırış",      trainer: "Sofia Keller", trainerInitials: "SK", intensity: "High", spots: 2 },
+    { time: "09:00", name: "Mobilite Akışı",        trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low",  spots: 8 },
+    { time: "12:00", name: "Güç HIIT",            trainer: "Jake Morrow", trainerInitials: "JM", intensity: "Max",  spots: 0 },
+    { time: "18:00", name: "Barbell Kulübü",          trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "High", spots: 3 },
+    { time: "19:30", name: "Atletik Kondisyon", trainer: "Jake Morrow", trainerInitials: "JM", intensity: "Max",  spots: 5 },
   ],
-  TUE: [
-    { time: "06:00", name: "Power HIIT",            trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 5 },
-    { time: "07:30", name: "Strength Foundation",   trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "Mid",  spots: 3 },
-    { time: "09:00", name: "Yoga & Breathwork",     trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low",  spots: 10 },
-    { time: "18:00", name: "Sprint & Power",        trainer: "Sofia Keller", trainerInitials: "SK", intensity: "High", spots: 2 },
-    { time: "19:30", name: "Mobility Flow",         trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low",  spots: 7 },
+  SAL: [
+    { time: "06:00", name: "Güç HIIT",            trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 5 },
+    { time: "07:30", name: "Kuvvet Temel",   trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "Mid",  spots: 3 },
+    { time: "09:00", name: "Yoga & Nefes",     trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low",  spots: 10 },
+    { time: "18:00", name: "Sprint & Güç",        trainer: "Sofia Keller", trainerInitials: "SK", intensity: "High", spots: 2 },
+    { time: "19:30", name: "Mobilite Akışı",         trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low",  spots: 7 },
   ],
-  WED: [
-    { time: "06:00", name: "Olympic Lifting",       trainer: "Sofia Keller", trainerInitials: "SK", intensity: "High", spots: 1 },
-    { time: "08:00", name: "Athletic Conditioning", trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 0 },
-    { time: "12:00", name: "Strength Foundation",   trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "Mid",  spots: 6 },
-    { time: "18:00", name: "Power HIIT",            trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 4 },
-    { time: "19:30", name: "Barbell Club",          trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "High", spots: 5 },
+  ÇAR: [
+    { time: "06:00", name: "Olimpik Kaldırış",       trainer: "Sofia Keller", trainerInitials: "SK", intensity: "High", spots: 1 },
+    { time: "08:00", name: "Atletik Kondisyon", trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 0 },
+    { time: "12:00", name: "Kuvvet Temel",   trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "Mid",  spots: 6 },
+    { time: "18:00", name: "Güç HIIT",            trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 4 },
+    { time: "19:30", name: "Barbell Kulübü",          trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "High", spots: 5 },
   ],
-  THU: [
-    { time: "06:00", name: "Mobility Flow",  trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low",  spots: 9 },
-    { time: "07:30", name: "Power HIIT",     trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 3 },
-    { time: "18:00", name: "Olympic Lifting",trainer: "Sofia Keller", trainerInitials: "SK", intensity: "High", spots: 2 },
-    { time: "19:30", name: "Sprint & Power", trainer: "Sofia Keller", trainerInitials: "SK", intensity: "High", spots: 7 },
+  PER: [
+    { time: "06:00", name: "Mobilite Akışı",  trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low",  spots: 9 },
+    { time: "07:30", name: "Güç HIIT",     trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 3 },
+    { time: "18:00", name: "Olimpik Kaldırış",trainer: "Sofia Keller", trainerInitials: "SK", intensity: "High", spots: 2 },
+    { time: "19:30", name: "Sprint & Güç", trainer: "Sofia Keller", trainerInitials: "SK", intensity: "High", spots: 7 },
   ],
-  FRI: [
-    { time: "06:00", name: "Barbell Club",          trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "High", spots: 4 },
-    { time: "08:00", name: "Athletic Conditioning", trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 0 },
-    { time: "12:00", name: "Yoga & Breathwork",     trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low",  spots: 8 },
-    { time: "18:00", name: "Strength Foundation",   trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "Mid",  spots: 5 },
-    { time: "19:30", name: "Power HIIT",            trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 2 },
+  CUM: [
+    { time: "06:00", name: "Barbell Kulübü",          trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "High", spots: 4 },
+    { time: "08:00", name: "Atletik Kondisyon", trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 0 },
+    { time: "12:00", name: "Yoga & Nefes",     trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low",  spots: 8 },
+    { time: "18:00", name: "Kuvvet Temel",   trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "Mid",  spots: 5 },
+    { time: "19:30", name: "Güç HIIT",            trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 2 },
   ],
-  SAT: [
-    { time: "08:00", name: "Weekend Warriors",  trainer: "Sofia Keller", trainerInitials: "SK", intensity: "Max",  spots: 3 },
-    { time: "10:00", name: "Olympic Lifting",   trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "High", spots: 5 },
-    { time: "11:30", name: "Mobility Flow",     trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low",  spots: 10 },
-    { time: "14:00", name: "Power HIIT",        trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 0 },
+  CMT: [
+    { time: "08:00", name: "Haftasonu Savaşçıları",  trainer: "Sofia Keller", trainerInitials: "SK", intensity: "Max",  spots: 3 },
+    { time: "10:00", name: "Olimpik Kaldırış",   trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "High", spots: 5 },
+    { time: "11:30", name: "Mobilite Akışı",     trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low",  spots: 10 },
+    { time: "14:00", name: "Güç HIIT",        trainer: "Jake Morrow",  trainerInitials: "JM", intensity: "Max",  spots: 0 },
   ],
-  SUN: [
-    { time: "09:00", name: "Recovery & Mobility", trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low", spots: 12 },
-    { time: "10:30", name: "Strength Foundation", trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "Mid", spots: 7 },
-    { time: "12:00", name: "Open Gym",            trainer: "Any Coach",    trainerInitials: "AC", intensity: "Mid", spots: 15 },
+  PAZ: [
+    { time: "09:00", name: "Toparlanma & Mobilite", trainer: "Aria Lowe",   trainerInitials: "AL", intensity: "Low", spots: 12 },
+    { time: "10:30", name: "Kuvvet Temel", trainer: "Marcus Thorn", trainerInitials: "MT", intensity: "Mid", spots: 7 },
+    { time: "12:00", name: "Serbest Çalışma",            trainer: "Any Coach",    trainerInitials: "AC", intensity: "Mid", spots: 15 },
   ],
 };
 
@@ -73,9 +73,17 @@ const INTENSITY: Record<ClassItem["intensity"], { dot: string; label: string }> 
   Max:  { dot: "bg-[#facc15]",   label: "text-[#facc15]" },
 };
 
+const INTENSITY_LABEL: Record<ClassItem["intensity"], string> = {
+  Low:  "Düşük",
+  Mid:  "Orta",
+  High: "Yüksek",
+  Max:  "Maks",
+};
+
 function ClassRow({ cls }: { cls: ClassItem }) {
   const [hovered, setHovered] = useState(false);
   const cfg = INTENSITY[cls.intensity];
+  const intensityLabel = INTENSITY_LABEL[cls.intensity];
 
   return (
     <div
@@ -126,16 +134,16 @@ function ClassRow({ cls }: { cls: ClassItem }) {
       <div className="hidden md:flex items-center gap-2">
         <div className={cn("w-2 h-2", cfg.dot)} />
         <span className={cn("font-body text-[11px] uppercase tracking-widest", cfg.label)}>
-          {cls.intensity}
+          {intensityLabel}
         </span>
       </div>
 
       {/* Spots */}
       <div className="text-right">
         {cls.spots === 0 ? (
-          <span className="font-body text-[11px] text-white/20 uppercase tracking-widest">Full</span>
+          <span className="font-body text-[11px] text-white/20 uppercase tracking-widest">Dolu</span>
         ) : (
-          <span className="font-body text-[11px] text-white/40">{cls.spots} left</span>
+          <span className="font-body text-[11px] text-white/40">{cls.spots} kaldı</span>
         )}
       </div>
     </div>
@@ -143,7 +151,7 @@ function ClassRow({ cls }: { cls: ClassItem }) {
 }
 
 export function ClassSchedule() {
-  const [day, setDay] = useState<Day>("MON");
+  const [day, setDay] = useState<Day>("PZT");
 
   return (
     <section id="schedule" className="bg-[#0a0a0a] relative overflow-hidden">
@@ -157,15 +165,15 @@ export function ClassSchedule() {
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-10 h-px bg-[#facc15]" />
                 <span className="font-body text-[#facc15] text-[10px] tracking-[0.4em] uppercase">
-                  "Weekly Schedule"
+                  "Haftalık Program"
                 </span>
               </div>
               <h2 className="font-display text-5xl md:text-7xl text-white uppercase leading-[0.9] tracking-tight">
-                CLASS<br />SCHEDULE
+                DERS<br />PROGRAMI
               </h2>
             </div>
             <p className="font-body text-white/35 text-sm max-w-xs leading-relaxed">
-              40+ classes per week spanning strength, conditioning, mobility, and Olympic lifting.
+              Kuvvet, kondisyon, mobilite ve Olimpik kaldırış dahil haftada 40+ ders.
             </p>
           </div>
         </BlurFade>
@@ -201,7 +209,7 @@ export function ClassSchedule() {
           >
             {/* Column headers */}
             <div className="hidden md:grid grid-cols-[80px_1fr_120px_100px_110px] gap-4 px-6 py-3 border-b border-white/[0.05]">
-              {["Time", "Class", "Duration", "Level", "Availability"].map((h) => (
+              {["Saat", "Ders", "Süre", "Seviye", "Doluluk"].map((h) => (
                 <div key={h} className="font-body text-[9px] text-white/20 uppercase tracking-[0.25em]">
                   {h}
                 </div>
@@ -220,7 +228,7 @@ export function ClassSchedule() {
             {(Object.entries(INTENSITY) as [ClassItem["intensity"], typeof INTENSITY[ClassItem["intensity"]]][]).map(([k, v]) => (
               <div key={k} className="flex items-center gap-2">
                 <div className={cn("w-2 h-2", v.dot)} />
-                <span className="font-body text-[10px] text-white/30 uppercase tracking-widest">{k}</span>
+                <span className="font-body text-[10px] text-white/30 uppercase tracking-widest">{INTENSITY_LABEL[k]}</span>
               </div>
             ))}
           </div>

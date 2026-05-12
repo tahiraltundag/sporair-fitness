@@ -1,15 +1,15 @@
 const COLS = [
   {
-    title: "Studio",
-    links: ["Classes", "Trainers", "Pricing", "Schedule", "Facilities"],
+    title: "Stüdyo",
+    links: ["Dersler", "Eğitmenler", "Fiyatlar", "Program", "Tesisler"],
   },
   {
-    title: "Company",
-    links: ["About", "Blog", "Careers", "Press", "Partners"],
+    title: "Şirket",
+    links: ["Hakkımızda", "Blog", "Kariyer", "Basın", "Ortaklar"],
   },
   {
-    title: "Legal",
-    links: ["Privacy", "Terms", "Accessibility", "Cookie Policy"],
+    title: "Yasal",
+    links: ["Gizlilik", "Koşullar", "Erişilebilirlik", "Çerez Politikası"],
   },
 ];
 
@@ -32,12 +32,12 @@ export function Footer() {
               <span className="w-[6px] h-[6px] bg-[#facc15] rotate-45 shrink-0" aria-hidden />
             </div>
             <p className="font-body text-[11px] text-white/25 leading-relaxed max-w-[16ch]">
-              Elite performance studio. Built for those who refuse ordinary.
+              Elit performans stüdyosu. Sıradanlığı reddedenler için inşa edildi.
             </p>
             {/* Address */}
             <div className="mt-5 font-body text-[10px] text-white/20 leading-relaxed">
-              123 Performance Ave<br />
-              New York, NY 10001<br />
+              Maslak, İstanbul<br />
+              Türkiye<br />
               <span className="text-[#facc15]/60">(212) 555-0100</span>
             </div>
           </div>
@@ -67,7 +67,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-8 border-t border-white/[0.05]">
           <div className="font-body text-[10px] text-white/20 tracking-[0.1em]">
-            © 2026 SporAirFitness, Inc. All rights reserved.
+            © 2026 SporAirFitness, Inc. Tüm hakları saklıdır.
           </div>
 
           {/* Socials — subtle */}

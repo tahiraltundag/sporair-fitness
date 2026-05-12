@@ -11,50 +11,50 @@ const TRAINERS = [
   {
     id:       "marcus",
     name:     "Marcus Thorn",
-    role:     "Head Strength Coach",
+    role:     "Baş Kuvvet Antrenörü",
     initials: "MT",
     photo:    "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=600&h=800&q=80",
-    specialties: ["Powerlifting", "Olympic Lifting", "Sports Performance"],
+    specialties: ["Powerlifting", "Olimpik Kaldırış", "Spor Performansı"],
     certs:    ["NSCA-CSCS", "USAW Level 2", "Precision Nutrition L1"],
-    bio:      "Former national powerlifting champion. 12 years coaching elite athletes. Marcus's programming philosophy: master fundamentals until they become instinct, then break every record you thought was fixed.",
-    stats:    [["12 yr", "Coaching"], ["340+", "Clients"], ["1,200+", "PRs Set"]],
-    avail:    "Mon · Wed · Fri · Sat",
+    bio:      "Eski ulusal powerlifting şampiyonu. 12 yıldır elit sporcuları çalıştırıyor. Marcus'un programlama felsefesi: temeller içgüdü haline gelene kadar ustalaş, sonra kırılamaz dediğin her rekoru kır.",
+    stats:    [["12 yıl", "Koçluk"], ["340+", "Danışan"], ["1.200+", "Rekor"]],
+    avail:    "Pzt · Çar · Cum · Cmt",
   },
   {
     id:       "sofia",
     name:     "Sofia Keller",
-    role:     "Olympic Weightlifting Coach",
+    role:     "Olimpik Kaldırış Antrenörü",
     initials: "SK",
     photo:    "https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=600&h=800&q=80",
-    specialties: ["Olympic Lifting", "Sprint & Power", "Biomechanics"],
+    specialties: ["Olimpik Kaldırış", "Sprint & Güç", "Biyomekanik"],
     certs:    ["USAW Level 3", "NSCA-CPT", "FMS Certified"],
-    bio:      "8 years competing internationally. Sofia's technical eye is unmatched — her athletes consistently hit PRs within the first 6 weeks. Known for breaking down the snatch and clean & jerk into teachable precision.",
-    stats:    [["27", "Int'l Comps"], ["180+", "Athletes"], ["6 wks", "Avg PR"]],
-    avail:    "Tue · Wed · Thu · Sat",
+    bio:      "8 yıl uluslararası düzeyde yarıştı. Sofia'nın teknik gözü eşsizdir — sporcuları ilk 6 hafta içinde düzenli olarak rekor kırar. Koparma ve silkme hareketlerini öğretilebilir hassasiyete indirgemesiyle tanınır.",
+    stats:    [["27", "Uluslararası"], ["180+", "Sporcu"], ["6 hf", "Ort. PR"]],
+    avail:    "Sal · Çar · Per · Cmt",
   },
   {
     id:       "jake",
     name:     "Jake Morrow",
-    role:     "Athletic Conditioning Lead",
+    role:     "Atletik Kondisyon Şefi",
     initials: "JM",
     photo:    "https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=600&h=800&q=80",
-    specialties: ["HIIT", "Metabolic Conditioning", "Speed & Agility"],
+    specialties: ["HIIT", "Metabolik Kondisyon", "Hız & Çeviklik"],
     certs:    ["NSCA-CSCS", "CrossFit Level 2", "EXOS Specialist"],
-    bio:      "Built his reputation training professional NFL and NBA athletes. Jake's conditioning circuits are notoriously brutal — and notoriously effective. His dropout rate is 2%. The other 98% are transformed.",
-    stats:    [["60+", "Pro Athletes"], ["+31%", "VO₂ Max"], ["2%", "Dropout Rate"]],
-    avail:    "Mon · Tue · Thu · Fri",
+    bio:      "Ününü profesyonel NFL ve NBA sporcularını çalıştırarak kazandı. Jake'in kondisyon devreleri acımasızlığıyla ünlüdür — ve etkisiyle de. Bırakma oranı %2. Diğer %98 tamamen dönüşür.",
+    stats:    [["60+", "Pro Sporcu"], ["+%31", "VO₂ Max"], ["%2", "Bırakma"]],
+    avail:    "Pzt · Sal · Per · Cum",
   },
   {
     id:       "aria",
     name:     "Aria Lowe",
-    role:     "Recovery & Mobility Director",
+    role:     "Toparlanma & Mobilite Direktörü",
     initials: "AL",
     photo:    "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&h=800&q=80",
-    specialties: ["Mobility", "Yoga & Breathwork", "Injury Rehab"],
+    specialties: ["Mobilite", "Yoga & Nefes", "Sakatlık Rehab"],
     certs:    ["200hr RYT", "FRC Mobility Specialist", "NASM-PES"],
-    bio:      "The quiet force behind every high-performer's longevity. Aria's evidence-based approach has helped 90+ athletes bounce back from injury faster than expected — and stay healthy years longer than they thought possible.",
-    stats:    [["90+", "Rehabs"], ["+45%", "Mobility"], ["+8 yr", "Longevity"]],
-    avail:    "Mon · Tue · Thu · Sun",
+    bio:      "Her yüksek performanslının uzun ömrünün arkasındaki sessiz güç. Aria'nın kanıta dayalı yaklaşımı, 90'dan fazla sporcunun sakatlıktan beklenenden hızlı dönmesine ve mümkün olduğunu düşündüklerinden yıllarca daha uzun süre sağlıklı kalmasına yardımcı oldu.",
+    stats:    [["90+", "Rehab"], ["+%45", "Mobilite"], ["+8 yıl", "Uzun Ömür"]],
+    avail:    "Pzt · Sal · Per · Paz",
   },
 ];
 
@@ -74,16 +74,16 @@ export function Trainers() {
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-10 h-px bg-[#facc15]" />
                 <span className="font-body text-[#facc15] text-[10px] tracking-[0.4em] uppercase">
-                  "Our Coaches"
+                  "Eğitmen Kadromuz"
                 </span>
               </div>
               <h2 className="font-display text-5xl md:text-7xl text-white uppercase leading-[0.9] tracking-tight">
-                ELITE<br />TRAINERS.
+                ELİT<br />EĞİTMENLER.
               </h2>
             </div>
             <p className="font-body text-white/35 text-sm max-w-xs leading-relaxed">
-              Not influencers. Not weekend-certified. Every SporAirFitness coach is a career
-              specialist with elite-level results to prove it.
+              Influencer değil. Haftasonu sertifikalı değil. Her SporAirFitness eğitmeni, elit seviye
+              sonuçlarla kanıtlanmış bir kariyer uzmanıdır.
             </p>
           </div>
         </BlurFade>
@@ -142,7 +142,7 @@ export function Trainers() {
                     ))}
                   </div>
                   <div className="mt-4 font-body text-[10px] text-white/25 uppercase tracking-widest group-hover:text-[#facc15]/70 transition-colors duration-150">
-                    {active === t.id ? "Close ↑" : "Profile ↓"}
+                    {active === t.id ? "Kapat ↑" : "Profil ↓"}
                   </div>
                 </div>
               </button>
@@ -173,7 +173,7 @@ export function Trainers() {
                   </p>
                   <div>
                     <div className="font-body text-[9px] text-white/25 uppercase tracking-[0.3em] mb-3">
-                      Certifications
+                      Sertifikalar
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {trainer.certs.map((c) => (
@@ -196,12 +196,12 @@ export function Trainers() {
                   </div>
                   <div>
                     <div className="font-body text-[9px] text-white/25 uppercase tracking-[0.3em] mb-2">
-                      Availability
+                      Müsaitlik
                     </div>
                     <div className="font-body text-sm text-white/50">{trainer.avail}</div>
                   </div>
                   <button className="w-full bg-[#facc15] text-[#0a0a0a] font-display text-sm tracking-[0.18em] uppercase py-4 hover:bg-[#fafaf5] transition-colors duration-150">
-                    Book With {trainer.name.split(" ")[0]}
+                    {trainer.name.split(" ")[0]} ile Başla
                   </button>
                 </div>
               </div>

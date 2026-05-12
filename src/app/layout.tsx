@@ -16,9 +16,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SporAirFitness — Elite Performance Studio",
+  title: "SporAirFitness — Elit Performans Stüdyosu",
   description:
-    "Train like you mean it. Premium fitness coaching, science-backed programming, zero compromises.",
+    "Hedefini ciddiye al. Premium fitness koçluğu, bilimsel programlama, sıfır taviz.",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
-      lang="en"
+      lang="tr"
       className={`${bigShoulders.variable} ${inter.variable}`}
     >
       <body className="grain bg-[#0a0a0a] text-white antialiased">

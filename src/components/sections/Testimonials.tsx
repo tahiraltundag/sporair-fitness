@@ -6,38 +6,38 @@ import { BlurFade } from "@/components/ui/BlurFade";
 const TESTIMONIALS = [
   {
     quote:
-      "I've been to 11 gyms in 10 years. SporAirFitness is the first place where I didn't quit after 6 weeks. The programming is different. The coaches are different. I'm different.",
+      "10 yılda 11 spor salonuna gittim. SporAirFitness 6 hafta sonra bırakmadığım ilk yer. Programlama farklı. Eğitmenler farklı. Ben farklıyım.",
     name:    "David M.",
-    title:   "Member, 14 months",
+    title:   "Üye, 14 ay",
     photo:   "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80",
     stats:   [
-      { value: "14 mo",  label: "Unbroken streak" },
-      { value: "340+",   label: "Classes" },
-      { value: "-19 kg", label: "Lost" },
+      { value: "14 ay",  label: "Kesintisiz devam" },
+      { value: "340+",   label: "Ders" },
+      { value: "-19 kg", label: "Verildi" },
     ],
     featured: true,
   },
   {
     quote:
-      "The coaches here don't let you make excuses. Three months in, I deadlifted my own bodyweight for the first time in my life.",
+      "Buradaki eğitmenler bahane üretmenize izin vermiyor. Üç ay sonra hayatımda ilk kez kendi vücut ağırlığımı deadlift yaptım.",
     name:    "Sarah K.",
-    title:   "Member, 9 months",
+    title:   "Üye, 9 ay",
     photo:   "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&h=120&q=80",
     stats:   [
-      { value: "75 kg",  label: "First deadlift PR" },
-      { value: "8 wks",  label: "Time to PR" },
+      { value: "75 kg",  label: "İlk deadlift rekoru" },
+      { value: "8 hf",   label: "Rekora süre" },
     ],
     featured: false,
   },
   {
     quote:
-      "As a surgeon I need precision and longevity. SporAirFitness gave me both. I've added 15 years of active training life.",
+      "Bir cerrah olarak hassasiyet ve uzun ömürlülüğe ihtiyacım var. SporAirFitness bana ikisini de verdi. Aktif antrenman hayatıma 15 yıl ekledim.",
     name:    "Dr. Priya N.",
-    title:   "Member, 2 years",
+    title:   "Üye, 2 yıl",
     photo:   "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=80",
     stats:   [
-      { value: "Zero",  label: "Injuries" },
-      { value: "+40%",  label: "Mobility gain" },
+      { value: "Sıfır", label: "Sakatlık" },
+      { value: "+%40",  label: "Mobilite artışı" },
     ],
     featured: false,
   },
@@ -54,7 +54,7 @@ export function Testimonials() {
           <div className="flex items-center gap-4 mb-14">
             <div className="w-10 h-px bg-[#facc15]" />
             <span className="font-body text-[#facc15] text-[10px] tracking-[0.4em] uppercase">
-              "Member Results"
+              "Üye Sonuçları"
             </span>
           </div>
         </BlurFade>
@@ -121,7 +121,7 @@ export function Testimonials() {
               </div>
 
               <div className="absolute bottom-6 right-8 font-body text-[10px] text-white/10 tracking-[0.3em] uppercase">
-                01 / Member
+                01 / Üye
               </div>
             </div>
           </BlurFade>
@@ -169,7 +169,7 @@ export function Testimonials() {
                       <div className="font-body text-[9px] text-white/30 uppercase tracking-wider">{t.title}</div>
                     </div>
                     <div className="ml-auto font-body text-[9px] text-white/10 tracking-[0.3em] uppercase">
-                      0{i + 2} / Member
+                      0{i + 2} / Üye
                     </div>
                   </div>
                 </div>
@@ -182,13 +182,13 @@ export function Testimonials() {
         <BlurFade delay={0.4}>
           <div className="mt-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-8 border-t border-white/[0.06]">
             <p className="font-body text-white/30 text-sm max-w-sm">
-              Over 500 transformations and counting. Every one started with a free intro session.
+              500'den fazla dönüşüm ve saymaya devam ediyoruz. Hepsi ücretsiz bir tanışma dersiyle başladı.
             </p>
             <a
               href="#cta"
               className="font-display text-sm tracking-[0.18em] uppercase text-[#facc15] hover:text-white border border-[#facc15]/30 hover:border-white/30 px-6 py-3 transition-all duration-150 whitespace-nowrap"
             >
-              Read All Stories →
+              Tüm Hikayeleri Oku →
             </a>
           </div>
         </BlurFade>

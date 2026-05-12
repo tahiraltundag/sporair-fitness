@@ -35,7 +35,7 @@ function SectionLabel() {
     <div className="flex items-center gap-4 mb-5">
       <div className="w-10 h-px bg-[#facc15]" />
       <span className="font-body text-[#facc15] text-[10px] tracking-[0.4em] uppercase">
-        &quot;Performance ROI&quot;
+        "Performans Yatırım Getirisi"
       </span>
     </div>
   );
@@ -102,16 +102,16 @@ export function ROICalculator() {
             className="font-display uppercase leading-[0.88] tracking-tight text-white mb-4"
             style={{ fontSize: "clamp(3.5rem, 9vw, 8rem)" }}
           >
-            CALCULATE YOUR
+            DÖNÜŞÜMÜNÜ
             <br />
-            <span className="text-[#facc15]">TRANSFORMATION</span>
+            <span className="text-[#facc15]">HESAPLA</span>
           </h2>
         </BlurFade>
 
         <BlurFade delay={0.14}>
           <p className="font-body text-white/40 text-base max-w-lg leading-relaxed mb-16">
-            Understand the real value of your investment. Time, health, productivity —
-            quantified. Adjust the sliders below to see your personalised projection.
+            Yatırımınızın gerçek değerini anlayın. Zaman, sağlık, üretkenlik —
+            rakamlarla. Aşağıdaki değerleri ayarlayın, kişisel projeksiyonunuzu görün.
           </p>
         </BlurFade>
 
@@ -129,7 +129,7 @@ export function ROICalculator() {
               <div className="grid sm:grid-cols-2 gap-x-6 gap-y-5">
                 {/* Current weight */}
                 <div>
-                  <InputLabel>Current Weight (kg)</InputLabel>
+                  <InputLabel>Mevcut Kilo (kg)</InputLabel>
                   <input
                     type="number"
                     min={40}
@@ -145,7 +145,7 @@ export function ROICalculator() {
 
                 {/* Target weight */}
                 <div>
-                  <InputLabel>Target Weight (kg)</InputLabel>
+                  <InputLabel>Hedef Kilo (kg)</InputLabel>
                   <input
                     type="number"
                     min={40}
@@ -161,13 +161,13 @@ export function ROICalculator() {
 
                 {/* Activity level — radio-style buttons */}
                 <div className="sm:col-span-2">
-                  <InputLabel>Current Activity Level</InputLabel>
+                  <InputLabel>Mevcut Aktivite Seviyesi</InputLabel>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                     {([
-                      ["sedentary", "Sedentary", "Desk job, no exercise"],
-                      ["light", "Light", "1–2 workouts/wk"],
-                      ["moderate", "Moderate", "3–4 workouts/wk"],
-                      ["veryActive", "Very Active", "5+ workouts/wk"],
+                      ["sedentary", "Hareketsiz", "Masa başı, egzersiz yok"],
+                      ["light", "Hafif", "1–2 antrenman/hf"],
+                      ["moderate", "Orta", "3–4 antrenman/hf"],
+                      ["veryActive", "Çok Aktif", "5+ antrenman/hf"],
                     ] as const).map(([val, label, desc]) => (
                       <button
                         key={val}
@@ -192,7 +192,7 @@ export function ROICalculator() {
                 {/* Training frequency — slider */}
                 <div className="sm:col-span-2">
                   <div className="flex items-end justify-between mb-2">
-                    <InputLabel>Training Sessions / Week</InputLabel>
+                    <InputLabel>Haftalık Antrenman Sayısı</InputLabel>
                     <span className="font-display text-2xl text-[#facc15] tabular-nums">
                       {inputs.sessionsPerWeek}
                     </span>
@@ -229,11 +229,11 @@ export function ROICalculator() {
 
                 {/* Session price — toggle */}
                 <div className="sm:col-span-2">
-                  <InputLabel>Session Price</InputLabel>
+                  <InputLabel>Seans Fiyatı</InputLabel>
                   <div className="grid grid-cols-2 gap-2">
                     {([
-                      ["single", "€60 Single Session"],
-                      ["tenPack", "€450 10-Pack (€45/session)"],
+                      ["single", "€60 Tek Seans"],
+                      ["tenPack", "€450 10'lu Paket (€45/seans)"],
                     ] as const).map(([val, label]) => (
                       <button
                         key={val}
@@ -254,7 +254,7 @@ export function ROICalculator() {
 
                 {/* Job type — select */}
                 <div>
-                  <InputLabel>Job Type</InputLabel>
+                  <InputLabel>Meslek Tipi</InputLabel>
                   <select
                     value={inputs.jobType}
                     onChange={(e) =>
@@ -263,15 +263,15 @@ export function ROICalculator() {
                     className={`${baseInput} appearance-none cursor-pointer`}
                     aria-label="Job type"
                   >
-                    <option value="desk">Desk job (low physical demand)</option>
-                    <option value="active">Active job (moderate physical demand)</option>
-                    <option value="manual">Manual labor (high physical demand)</option>
+                    <option value="desk">Masa başı (düşük fiziksel talep)</option>
+                    <option value="active">Aktif (orta fiziksel talep)</option>
+                    <option value="manual">Bedensel iş (yüksek fiziksel talep)</option>
                   </select>
                 </div>
 
                 {/* Annual salary */}
                 <div>
-                  <InputLabel>Annual Salary (€)</InputLabel>
+                  <InputLabel>Yıllık Maaş (€)</InputLabel>
                   <input
                     type="number"
                     min={0}
@@ -302,7 +302,7 @@ export function ROICalculator() {
                     {/* Hero number */}
                     <div className="text-center mb-12">
                       <div className="font-body text-[9px] text-white/25 uppercase tracking-[0.3em] mb-3">
-                        5-Year Net ROI
+                        5 Yıllık Net Getiri
                       </div>
                       <div
                         className="font-display text-[#facc15] leading-[0.85]"
@@ -321,28 +321,28 @@ export function ROICalculator() {
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-10">
                       {([
                         {
-                          label: "Time to Goal",
+                          label: "Hedefe Süre",
                           value: r.monthsToGoal,
                           prefix: "",
-                          suffix: " months",
+                          suffix: " ay",
                           decimals: 1,
                         },
                         {
-                          label: "Total Investment",
+                          label: "Toplam Yatırım",
                           value: r.totalInvestment,
                           prefix: "€",
                           suffix: "",
                           decimals: 0,
                         },
                         {
-                          label: "Annual Benefit",
+                          label: "Yıllık Fayda",
                           value: r.totalBenefitFiveYear / 5,
                           prefix: "€",
                           suffix: "/yr",
                           decimals: 0,
                         },
                         {
-                          label: "ROI Return",
+                          label: "YG Oranı",
                           value: r.roiPercentage,
                           prefix: "",
                           suffix: "%",
@@ -384,30 +384,30 @@ export function ROICalculator() {
                       className="border-l-2 border-[#facc15]/20 pl-5 md:pl-7 space-y-5 mb-10"
                     >
                       <div className="font-body text-[9px] text-[#facc15]/60 uppercase tracking-[0.25em] mb-3">
-                        Hidden Benefits Beyond Money
+                        Paranın Ötesindeki Gizli Faydalar
                       </div>
 
                       <BenefitItem
-                        title="Workplace Productivity"
-                        body={`Regular exercise is linked to a ${Math.round(PRODUCTIVITY_BOOST * 100)}% boost in workplace productivity, translating to €${Math.round(r.productivityGainAnnual).toLocaleString("de-DE")}/yr in your case.`}
+                        title="İşyeri Üretkenliği"
+                        body={`Düzenli egzersiz, işyeri üretkenliğinde %${Math.round(PRODUCTIVITY_BOOST * 100)} artışla ilişkilendirilmiştir. Sizin durumunuzda bu yılda €${Math.round(r.productivityGainAnnual).toLocaleString("de-DE")} değerinde.`}
                         source="Harvard Business Review"
                       />
 
                       <BenefitItem
-                        title="Long-Term Health"
-                        body={`Active adults face ${Math.round(CHRONIC_DISEASE_RISK_REDUCTION * 100)}% lower chronic disease risk, saving an estimated €${Math.round(r.healthcareSavingsAnnual).toLocaleString("de-DE")}/yr in healthcare costs.`}
-                        source="World Health Organization"
+                        title="Uzun Vadeli Sağlık"
+                        body={`Aktif yetişkinler %${Math.round(CHRONIC_DISEASE_RISK_REDUCTION * 100)} daha düşük kronik hastalık riski taşır, bu da yılda yaklaşık €${Math.round(r.healthcareSavingsAnnual).toLocaleString("de-DE")} sağlık tasarrufu demektir.`}
+                        source="Dünya Sağlık Örgütü"
                       />
 
                       <BenefitItem
-                        title="Mental Resilience"
-                        body={`Consistent training reduces depression and anxiety risk by ~${Math.round(MENTAL_HEALTH_RISK_REDUCTION * 100)}%, with measurable quality-of-life and financial upside.`}
+                        title="Zihinsel Dayanıklılık"
+                        body={`Düzenli antrenman depresyon ve anksiyete riskini ~%${Math.round(MENTAL_HEALTH_RISK_REDUCTION * 100)} azaltır, ölçülebilir yaşam kalitesi ve finansal getiri sağlar.`}
                         source="Lancet Psychiatry"
                       />
 
                       <BenefitItem
-                        title="Break-Even Point"
-                        body={`Your investment pays itself back in approximately ${r.breakEvenMonths < 1 ? "under a month" : `${Math.round(r.breakEvenMonths)} months`}. Everything after that is pure return — in energy, confidence, and longevity.`}
+                        title="Başa Baş Noktası"
+                        body={`Yatırımınız yaklaşık ${r.breakEvenMonths < 1 ? "1 aydan kısa sürede" : `${Math.round(r.breakEvenMonths)} ayda`} kendini amorti eder. Sonrası tamamen kazanç — enerji, özgüven ve uzun ömür olarak.`}
                         source="McKinsey Health Institute"
                       />
                     </motion.div>
@@ -424,7 +424,7 @@ export function ROICalculator() {
                           background="#facc15"
                           className="w-full font-display text-sm tracking-[0.18em] py-5"
                         >
-                          BOOK YOUR FIRST SESSION — €60
+                          İLK DERSİNİ AYIRT — €60
                           <ArrowRight size={14} className="ml-2" />
                         </ShimmerButton>
                       </a>
@@ -435,7 +435,7 @@ export function ROICalculator() {
 
               {/* Footer attribution */}
               <div className="mt-10 font-body text-[10px] text-white/25 tracking-[0.25em] uppercase text-center">
-                Calculations based on ACSM, WHO, HBR &amp; McKinsey research
+                Hesaplamalar ACSM, WHO, HBR &amp; McKinsey araştırmalarına dayanmaktadır
               </div>
             </div>
           </div>
@@ -462,7 +462,7 @@ function BenefitItem({
         <span className="font-body text-sm text-white/70 font-medium">{title}</span>
       </div>
       <p className="font-body text-sm text-white/40 leading-relaxed ml-5">{body}</p>
-      <p className="font-body text-[9px] text-white/25 mt-0.5 ml-5">Source: {source}</p>
+      <p className="font-body text-[9px] text-white/25 mt-0.5 ml-5">Kaynak: {source}</p>
     </div>
   );
 }

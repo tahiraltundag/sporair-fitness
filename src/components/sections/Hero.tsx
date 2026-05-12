@@ -56,7 +56,7 @@ export function Hero() {
               key={i}
               className="font-body text-[#0a0a0a] text-[13px] leading-5 font-semibold tracking-[0.3em] uppercase mx-6 shrink-0 whitespace-nowrap"
             >
-              SporAirFitness &nbsp;/&nbsp; ELITE PERFORMANCE STUDIO &nbsp;/&nbsp; TRAIN LIKE YOU MEAN IT
+              SporAirFitness &nbsp;/&nbsp; ELİT PERFORMANS STÜDYOSU &nbsp;/&nbsp; HEDEFİNİ CİDDİYE AL
             </span>
           ))}
         </div>
@@ -68,7 +68,7 @@ export function Hero() {
         <motion.div {...enter(0.1)} className="flex items-center gap-3 mb-5">
           <div className="w-8 h-px bg-[#facc15]" />
           <span className="font-body text-[#facc15] text-[10px] tracking-[0.45em] uppercase">
-            "Premium Fitness Studio"
+            "Premium Fitness Stüdyosu"
           </span>
         </motion.div>
 
@@ -77,19 +77,19 @@ export function Hero() {
           className="font-display uppercase leading-[0.88] tracking-tight text-white"
           style={{ fontSize: "clamp(4.5rem, 12vw, 11.5rem)" }}
         >
-          TRAIN LIKE
+          HEDEFİNİ
           <br />
-          YOU MEAN
+          CİDDİYE
           <br />
-          <span className="text-[#facc15]">IT.</span>
+          <span className="text-[#facc15]">AL.</span>
         </motion.h1>
 
         <motion.p
           {...enter(0.38)}
           className="font-body text-white/55 text-base md:text-lg max-w-[38ch] leading-relaxed mt-6"
         >
-          Science-backed programming. World-class coaches.
-          Ruthless accountability. No membership compromise.
+          Bilimsel programlama. Dünya çapında eğitmenler.
+          Tavizsiz takip. Üyelik dayatması yok.
         </motion.p>
 
         <motion.div
@@ -100,14 +100,14 @@ export function Hero() {
             href="#cta"
             className="group flex items-center gap-3 bg-[#facc15] text-[#0a0a0a] font-display text-sm tracking-[0.18em] uppercase px-8 py-[15px] hover:bg-[#fafaf5] transition-colors duration-150"
           >
-            Book Intro Session
+            Ücretsiz Tanışma Dersi
             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-150" />
           </a>
           <a
             href="#schedule"
             className="font-body text-[11px] tracking-[0.2em] uppercase text-white/55 hover:text-white border border-white/20 hover:border-white/50 px-7 py-[14px] transition-all duration-150"
           >
-            View Classes
+            Dersleri Gör
           </a>
         </motion.div>
 
@@ -116,10 +116,10 @@ export function Hero() {
           className="flex flex-wrap gap-8 mt-10 pt-8 border-t border-white/[0.1]"
         >
           {[
-            ["500+", "Members trained"],
-            ["12",   "Expert coaches"],
-            ["8 yr", "In business"],
-            ["#1",   "Rated studio"],
+            ["500+", "Aktif Üye"],
+            ["12",   "Uzman Eğitmen"],
+            ["8 yıl", "Tecrübe"],
+            ["#1",   "En İyi Stüdyo"],
           ].map(([v, l]) => (
             <div key={l} className="flex items-baseline gap-2">
               <span className="font-display text-[1.4rem] text-white tracking-wide">{v}</span>
@@ -139,7 +139,7 @@ export function Hero() {
           className="font-body text-[9px] text-white/25 tracking-[0.35em] uppercase"
           style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
         >
-          "SCROLL TO EXPLORE"
+          "DAHA FAZLASI İÇİN KAYDIR"
         </div>
         <div className="w-px h-16 bg-white/10" />
       </motion.div>

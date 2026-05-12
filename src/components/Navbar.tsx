@@ -6,10 +6,10 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { label: "Classes",  href: "#schedule" },
-  { label: "Trainers", href: "#trainers" },
-  { label: "Pricing",  href: "#cta" },
-  { label: "About",    href: "#" },
+  { label: "Dersler",     href: "#schedule" },
+  { label: "Eğitmenler",  href: "#trainers" },
+  { label: "Fiyatlar",    href: "#cta" },
+  { label: "Hakkımızda",  href: "#" },
 ];
 
 export function Navbar() {
@@ -62,7 +62,7 @@ export function Navbar() {
             href="#cta"
             className="hidden md:inline-block bg-[#facc15] text-[#0a0a0a] font-display text-[13px] tracking-[0.18em] uppercase px-6 py-[10px] hover:bg-[#fafaf5] transition-colors duration-150"
           >
-            Book Session
+            Ders Ayırt
           </a>
 
           {/* Burger */}
@@ -109,7 +109,7 @@ export function Navbar() {
               transition={{ delay: 0.32 }}
               className="mt-10 bg-[#facc15] text-[#0a0a0a] font-display text-xl tracking-[0.14em] uppercase px-10 py-5 hover:bg-[#fafaf5] transition-colors"
             >
-              Book Intro Session
+              Ücretsiz Tanışma
             </motion.a>
           </motion.div>
         )}

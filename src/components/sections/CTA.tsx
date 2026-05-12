@@ -6,10 +6,10 @@ import { BlurFade } from "@/components/ui/BlurFade";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
 const PERKS = [
-  "Free 90-min intro session with a head coach",
-  "Full facility tour & custom program consultation",
-  "Zero obligation — no credit card required",
-  "30-day results guarantee or second month free",
+  "Baş antrenörle 90 dk ücretsiz tanışma dersi",
+  "Tam tesis turu & kişiye özel program danışmanlığı",
+  "Sıfır yükümlülük — kredi kartı gerekmez",
+  "30 günlük sonuç garantisi ya da ikinci ay ücretsiz",
 ];
 
 export function CTA() {
@@ -53,7 +53,7 @@ export function CTA() {
               <div className="flex items-center gap-4 mb-5">
                 <div className="w-10 h-px bg-[#facc15]" />
                 <span className="font-body text-[#facc15] text-[10px] tracking-[0.4em] uppercase">
-                  "Join SporAirFitness"
+                  "SporAirFitness'a Katıl"
                 </span>
               </div>
 
@@ -61,16 +61,16 @@ export function CTA() {
                 className="font-display uppercase leading-[0.88] tracking-tight text-white mb-8"
                 style={{ fontSize: "clamp(4rem, 10vw, 9rem)" }}
               >
-                READY
+                BAŞLAMAYA
                 <br />
-                TO
+                HAZIR
                 <br />
-                <span className="text-[#facc15]">START?</span>
+                <span className="text-[#facc15]">MISIN?</span>
               </h2>
 
               <p className="font-body text-white/45 text-base leading-relaxed max-w-[40ch] mb-10">
-                Most people spend years thinking about the gym they deserve.
-                SporAirFitness members just show up. One free session. That&apos;s all it takes.
+                Çoğu insan yıllarını hak ettikleri spor salonunu düşünerek geçirir.
+                SporAirFitness üyeleri sadece gelir. Tek bir ücretsiz ders. Hepsi bu.
               </p>
 
               <ul className="space-y-3 mb-10">
@@ -91,7 +91,7 @@ export function CTA() {
 
               {/* Trust row */}
               <div className="flex flex-wrap gap-8 pt-8 border-t border-white/[0.07]">
-                {[["500+", "Members"], ["★ 4.9", "Google"], ["8 yr", "In business"]].map(([v, l]) => (
+                {[["500+", "Üye"], ["★ 4.9", "Google"], ["8 yıl", "Tecrübe"]].map(([v, l]) => (
                   <div key={l}>
                     <div className="font-display text-2xl text-white">{v}</div>
                     <div className="font-body text-[10px] text-white/30 uppercase tracking-widest">{l}</div>
@@ -118,12 +118,12 @@ export function CTA() {
                     className="space-y-5"
                   >
                     <h3 className="font-display text-2xl md:text-3xl text-white tracking-[0.12em] uppercase mb-7">
-                      Book Intro Session
+                      Tanışma Dersi Ayırt
                     </h3>
 
                     {[
-                      { key: "name",  label: "Full Name",      type: "text",  placeholder: "Alex Johnson", id: "cta-name" },
-                      { key: "email", label: "Email Address",  type: "email", placeholder: "alex@company.com", id: "cta-email" },
+                      { key: "name",  label: "Ad Soyad",        type: "text",  placeholder: "Ahmet Yılmaz", id: "cta-name" },
+                      { key: "email", label: "E-posta Adresi",  type: "email", placeholder: "ahmet@firma.com", id: "cta-email" },
                     ].map((f) => (
                       <div key={f.key}>
                         <label htmlFor={f.id} className="font-body text-[10px] text-white/40 uppercase tracking-[0.3em] block mb-2">
@@ -143,7 +143,7 @@ export function CTA() {
 
                     <div>
                       <label htmlFor="cta-goal" className="font-body text-[10px] text-white/40 uppercase tracking-[0.3em] block mb-2">
-                        Primary Goal
+                        Ana Hedef
                       </label>
                       <select
                         id="cta-goal"
@@ -152,12 +152,12 @@ export function CTA() {
                         onChange={(e) => setForm({ ...form, goal: e.target.value })}
                         className="w-full bg-[#1a1a1a] border border-white/[0.08] focus:border-[#facc15] outline-none px-4 py-3.5 font-body text-sm text-white transition-colors duration-150 appearance-none cursor-pointer"
                       >
-                        <option value="" disabled>Select your goal</option>
-                        <option value="strength">Build Strength & Muscle</option>
-                        <option value="fatloss">Fat Loss & Body Composition</option>
-                        <option value="performance">Athletic Performance</option>
-                        <option value="mobility">Mobility & Injury Rehab</option>
-                        <option value="endurance">Endurance & Conditioning</option>
+                        <option value="" disabled>Hedefinizi seçin</option>
+                        <option value="strength">Kuvvet & Kas Geliştirme</option>
+                        <option value="fatloss">Yağ Yakımı & Vücut Kompozisyonu</option>
+                        <option value="performance">Atletik Performans</option>
+                        <option value="mobility">Mobilite & Sakatlık Rehabilitasyonu</option>
+                        <option value="endurance">Dayanıklılık & Kondisyon</option>
                       </select>
                     </div>
 
@@ -166,14 +166,14 @@ export function CTA() {
                       disabled={loading}
                       className="group w-full flex items-center justify-center gap-3 bg-[#facc15] text-[#0a0a0a] font-display text-sm tracking-[0.18em] uppercase py-5 mt-2 hover:bg-[#fafaf5] transition-colors duration-150 disabled:opacity-60"
                     >
-                      {loading ? "Booking..." : "Claim Free Session"}
+                      {loading ? "Ayırtılıyor..." : "Ücretsiz Dersi Al"}
                       {!loading && (
                         <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-150" />
                       )}
                     </button>
 
                     <p className="font-body text-[10px] text-white/35 text-center">
-                      No card required. No spam. Unsubscribe anytime.
+                      Kart gerekmez. Spam yok. İstediğiniz zaman çıkın.
                     </p>
                   </motion.form>
                 ) : (
@@ -188,18 +188,18 @@ export function CTA() {
                       <CheckCircle2 size={24} className="text-[#0a0a0a]" />
                     </div>
                     <h3 className="font-display text-4xl text-white tracking-[0.1em] uppercase mb-3">
-                      You&apos;re In.
+                      Kaydın Alındı.
                     </h3>
                     <p className="font-body text-white/45 text-sm leading-relaxed max-w-[28ch] mx-auto">
-                      Check <strong className="text-white">{form.email}</strong> for your
-                      confirmation. We&apos;ll see you on the floor.
+                      Onay için <strong className="text-white">{form.email}</strong> adresinizi
+                      kontrol edin. Stüdyoda görüşürüz.
                     </p>
                     <div className="mt-8 pt-8 border-t border-white/[0.07]">
                       <div className="font-body text-[9px] text-white/20 uppercase tracking-[0.3em] mb-2">
-                        What to bring
+                        Yanınızda getirin
                       </div>
                       <p className="font-body text-sm text-white/40">
-                        Athletic clothes, water, and ambition. We handle the rest.
+                        Spor kıyafetleri, su ve hırs. Gerisini biz hallederiz.
                       </p>
                     </div>
                   </motion.div>

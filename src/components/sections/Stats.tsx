@@ -4,10 +4,10 @@ import { BlurFade } from "@/components/ui/BlurFade";
 import { NumberTicker } from "@/components/ui/NumberTicker";
 
 const STATS = [
-  { value: 500,  suffix: "+", label: "Members Trained",  sub: "Active & alumni" },
-  { value: 12,   suffix: "",  label: "Expert Coaches",   sub: "NSCA & CSCS certified" },
-  { value: 94,   suffix: "%", label: "Retention Rate",   sub: "After 90-day trial" },
-  { value: 8,    suffix: "",  label: "Years in Business", sub: "Est. 2017, New York" },
+  { value: 500,  suffix: "+", label: "Aktif Üye",        sub: "Mezunlar dahil" },
+  { value: 12,   suffix: "",  label: "Uzman Eğitmen",    sub: "NSCA & CSCS sertifikalı" },
+  { value: 94,   suffix: "%", label: "Devam Oranı",      sub: "90 günlük deneme sonrası" },
+  { value: 8,    suffix: "",  label: "Yıllık Tecrübe",   sub: "2017'den beri, İstanbul" },
 ];
 
 export function Stats() {
@@ -22,7 +22,7 @@ export function Stats() {
           <div className="flex items-center gap-4 mb-14">
             <div className="w-10 h-px bg-[#facc15]" />
             <span className="font-body text-[#facc15] text-[10px] tracking-[0.4em] uppercase">
-              "By The Numbers"
+              "Rakamlarla"
             </span>
           </div>
         </BlurFade>
@@ -55,8 +55,8 @@ export function Stats() {
         <BlurFade delay={0.45}>
           <blockquote className="mt-16 pt-12 border-t border-white/[0.07] max-w-2xl">
             <p className="font-display text-2xl md:text-4xl text-white/75 leading-tight uppercase tracking-wide">
-              "IN 12 WEEKS I LOST 22KG AND{" "}
-              <span className="text-[#facc15]">DISCOVERED MY LIMIT WAS A LIE."</span>
+              "12 HAFTADA 22 KİLO VERDİM VE{" "}
+              <span className="text-[#facc15]">SINIRLARIMIN YALAN OLDUĞUNU KEŞFETTİM."</span>
             </p>
             <footer className="mt-5 flex items-center gap-3">
               <div className="w-9 h-9 bg-[#facc15]/15 border border-[#facc15]/30 flex items-center justify-center shrink-0">
@@ -65,7 +65,7 @@ export function Stats() {
               <div>
                 <cite className="font-body text-xs text-white not-italic">James R.</cite>
                 <div className="font-body text-[10px] text-white/35 mt-0.5">
-                  Member since 2023 · Strength & Conditioning
+                  2023'ten beri üye · Kuvvet & Kondisyon
                 </div>
               </div>
             </footer>
