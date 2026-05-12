@@ -46,10 +46,10 @@ export function Hero() {
       </div>
 
       {/* ── Yellow ticker ── */}
-      <div className="relative z-20 bg-[#facc15] overflow-hidden py-4 mt-16">
+      <div className="relative z-20 bg-[#facc15] overflow-hidden flex items-center py-4 mt-16">
         <div
-          className="animate-marquee select-none"
-          style={{ display: "flex", width: "max-content" }}
+          className="animate-marquee select-none flex items-center"
+          style={{ width: "max-content" }}
         >
           {Array.from({ length: 20 }).map((_, i) => (
             <span
