@@ -12,7 +12,7 @@ const enter = (delay = 0) => ({
 
 export function Hero() {
   return (
-    <section className="relative h-screen min-h-[680px] flex flex-col overflow-hidden bg-[#0a0a0a]">
+    <section className="relative min-h-screen flex flex-col bg-[#0a0a0a]">
 
       {/* ── Full-bleed athlete photo ── */}
       <div className="absolute inset-0 z-0">
