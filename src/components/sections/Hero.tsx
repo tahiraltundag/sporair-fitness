@@ -46,12 +46,15 @@ export function Hero() {
       </div>
 
       {/* ── Yellow ticker ── */}
-      <div className="relative z-20 bg-[#facc15] overflow-hidden py-3 mt-16">
-        <div className="flex animate-marquee whitespace-nowrap select-none">
-          {Array.from({ length: 10 }).map((_, i) => (
+      <div className="relative z-20 bg-[#facc15] overflow-hidden py-4 mt-16">
+        <div
+          className="animate-marquee select-none"
+          style={{ display: "flex", width: "max-content" }}
+        >
+          {Array.from({ length: 20 }).map((_, i) => (
             <span
               key={i}
-              className="font-body text-[#0a0a0a] text-[13px] font-semibold tracking-[0.3em] uppercase mx-6"
+              className="font-body text-[#0a0a0a] text-[13px] leading-5 font-semibold tracking-[0.3em] uppercase mx-6 shrink-0 whitespace-nowrap"
             >
               SporAirFitness &nbsp;/&nbsp; ELITE PERFORMANCE STUDIO &nbsp;/&nbsp; TRAIN LIKE YOU MEAN IT
             </span>
