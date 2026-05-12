@@ -64,7 +64,7 @@ const ACTIVITY_MULTIPLIER: Record<RoiInputs["activityLevel"], number> = {
 };
 
 // HBR meta-analysis: fit employees show +21% productivity
-const PRODUCTIVITY_BOOST = 0.21;
+export const PRODUCTIVITY_BOOST = 0.21;
 
 // Job-type adjustment: physical jobs already capture some of the fitness dividend
 const JOB_TYPE_MULTIPLIER: Record<RoiInputs["jobType"], number> = {
@@ -74,11 +74,11 @@ const JOB_TYPE_MULTIPLIER: Record<RoiInputs["jobType"], number> = {
 };
 
 // WHO: regular exercise → ~40% reduction in chronic disease risk
-const CHRONIC_DISEASE_RISK_REDUCTION = 0.4;
+export const CHRONIC_DISEASE_RISK_REDUCTION = 0.4;
 const AVG_ANNUAL_HEALTHCARE_COST = 2400; // EUR, OECD avg age 30–50
 
 // Lancet Psychiatry / McKinsey: ~30% reduction in depression/anxiety
-const MENTAL_HEALTH_RISK_REDUCTION = 0.3;
+export const MENTAL_HEALTH_RISK_REDUCTION = 0.3;
 const AVG_ANNUAL_MENTAL_HEALTH_COST = 1200; // EUR, therapy + medication avoidance
 
 const WEEKS_PER_MONTH = 4.33;

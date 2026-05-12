@@ -122,14 +122,15 @@ export function CTA() {
                     </h3>
 
                     {[
-                      { key: "name",  label: "Full Name",      type: "text",  placeholder: "Alex Johnson" },
-                      { key: "email", label: "Email Address",  type: "email", placeholder: "alex@company.com" },
+                      { key: "name",  label: "Full Name",      type: "text",  placeholder: "Alex Johnson", id: "cta-name" },
+                      { key: "email", label: "Email Address",  type: "email", placeholder: "alex@company.com", id: "cta-email" },
                     ].map((f) => (
                       <div key={f.key}>
-                        <label className="font-body text-[9px] text-white/25 uppercase tracking-[0.3em] block mb-2">
+                        <label htmlFor={f.id} className="font-body text-[10px] text-white/40 uppercase tracking-[0.3em] block mb-2">
                           {f.label}
                         </label>
                         <input
+                          id={f.id}
                           type={f.type}
                           required
                           value={form[f.key as "name" | "email"]}
@@ -141,10 +142,11 @@ export function CTA() {
                     ))}
 
                     <div>
-                      <label className="font-body text-[9px] text-white/25 uppercase tracking-[0.3em] block mb-2">
+                      <label htmlFor="cta-goal" className="font-body text-[10px] text-white/40 uppercase tracking-[0.3em] block mb-2">
                         Primary Goal
                       </label>
                       <select
+                        id="cta-goal"
                         required
                         value={form.goal}
                         onChange={(e) => setForm({ ...form, goal: e.target.value })}
@@ -170,7 +172,7 @@ export function CTA() {
                       )}
                     </button>
 
-                    <p className="font-body text-[10px] text-white/20 text-center">
+                    <p className="font-body text-[10px] text-white/35 text-center">
                       No card required. No spam. Unsubscribe anytime.
                     </p>
                   </motion.form>

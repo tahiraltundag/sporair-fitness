@@ -13,6 +13,9 @@ import {
   isFormComplete,
   loadInputs,
   saveInputs,
+  PRODUCTIVITY_BOOST,
+  CHRONIC_DISEASE_RISK_REDUCTION,
+  MENTAL_HEALTH_RISK_REDUCTION,
 } from "@/lib/roi";
 
 /* ─── Helpers ───────────────────────────────────────────────────── */
@@ -40,7 +43,7 @@ function SectionLabel() {
 
 function InputLabel({ children }: { children: React.ReactNode }) {
   return (
-    <label className="font-body text-[9px] text-white/25 uppercase tracking-[0.3em] block mb-2">
+    <label className="font-body text-[10px] text-white/40 uppercase tracking-[0.3em] block mb-2">
       {children}
     </label>
   );
@@ -133,7 +136,7 @@ export function ROICalculator() {
                     max={200}
                     value={inputs.currentWeight}
                     onChange={(e) =>
-                      updateField(setInputs, "currentWeight", Number(e.target.value) || 40)
+                      updateField(setInputs, "currentWeight", Math.max(40, Number(e.target.value) || 40))
                     }
                     className={baseInput}
                     aria-label="Current weight in kilograms"
@@ -149,7 +152,7 @@ export function ROICalculator() {
                     max={200}
                     value={inputs.targetWeight}
                     onChange={(e) =>
-                      updateField(setInputs, "targetWeight", Number(e.target.value) || 40)
+                      updateField(setInputs, "targetWeight", Math.max(40, Number(e.target.value) || 40))
                     }
                     className={baseInput}
                     aria-label="Target weight in kilograms"
@@ -275,7 +278,7 @@ export function ROICalculator() {
                     max={10_000_000}
                     value={inputs.annualSalary}
                     onChange={(e) =>
-                      updateField(setInputs, "annualSalary", Number(e.target.value) || 0)
+                      updateField(setInputs, "annualSalary", Math.max(0, Number(e.target.value) || 0))
                     }
                     className={baseInput}
                     aria-label="Annual salary in euros"
@@ -357,7 +360,7 @@ export function ROICalculator() {
                           }}
                           className="bg-[#0a0a0a] border border-white/[0.06] p-5 md:p-6 hover:-translate-y-px transition-transform duration-200"
                         >
-                          <div className="font-body text-[9px] text-white/25 uppercase tracking-[0.25em] mb-3">
+                          <div className="font-body text-[10px] text-white/40 uppercase tracking-[0.25em] mb-3">
                             {label}
                           </div>
                           <div className="font-display text-xl md:text-2xl text-[#facc15]">
@@ -431,7 +434,7 @@ export function ROICalculator() {
               </AnimatePresence>
 
               {/* Footer attribution */}
-              <div className="mt-10 font-body text-[10px] text-white/15 tracking-[0.25em] uppercase text-center">
+              <div className="mt-10 font-body text-[10px] text-white/25 tracking-[0.25em] uppercase text-center">
                 Calculations based on ACSM, WHO, HBR &amp; McKinsey research
               </div>
             </div>
@@ -459,12 +462,8 @@ function BenefitItem({
         <span className="font-body text-sm text-white/70 font-medium">{title}</span>
       </div>
       <p className="font-body text-sm text-white/40 leading-relaxed ml-5">{body}</p>
-      <p className="font-body text-[9px] text-white/15 mt-0.5 ml-5">Source: {source}</p>
+      <p className="font-body text-[9px] text-white/25 mt-0.5 ml-5">Source: {source}</p>
     </div>
   );
 }
 
-// Re-export constants for the benefit item to reference
-const PRODUCTIVITY_BOOST = 0.21;
-const CHRONIC_DISEASE_RISK_REDUCTION = 0.4;
-const MENTAL_HEALTH_RISK_REDUCTION = 0.3;
